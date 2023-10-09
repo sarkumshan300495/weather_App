@@ -21,7 +21,7 @@ class _FirstScreenState extends State<FirstScreen> {
     try {
       String cityName = 'London';
       final res = await http.get(Uri.parse(
-          "https://api.openweathermap.org/data/2.5/weather?q=$cityName&APPID=564844e658a1cf495ba0be4b36882724"));
+          "https://api.openweathermap.org/data/2.5/weather?q=$cityName&APPID=$openweatherAPI"));
       print(res.body);
       final data = jsonDecode(res.body); // convet json format to normal format
 
